@@ -1,9 +1,19 @@
+import { useContext } from "react";
+
 import { HistoryContainer, HistoryList, Status } from "./styles";
 
+import { CyclesContext } from "../../contexts/CycleContext";
+
 export function History() {
+  const { cycles } = useContext(CyclesContext);
+
   return (
     <HistoryContainer>
       <h1>Meu histórico</h1>
+
+      {cycles.map((cycle) => {
+        return <p>{cycle.task}</p>;
+      })}
 
       <HistoryList>
         <table>
