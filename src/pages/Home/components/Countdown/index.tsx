@@ -11,7 +11,6 @@ export function Countdown() {
     activeCycle,
     activeCycleId,
     markCurrentCycleAsFinished,
-    resetActiveCycleId,
     amountSecondsPassed,
     setSecondsPassed,
   } = useContext(CyclesContext);
@@ -32,7 +31,6 @@ export function Countdown() {
           markCurrentCycleAsFinished();
           clearInterval(interval);
           setSecondsPassed(0);
-          resetActiveCycleId();
           setDocumentTitle(`Ignite Timer`);
           return;
         }
@@ -49,7 +47,6 @@ export function Countdown() {
     totalSeconds,
     activeCycleId,
     markCurrentCycleAsFinished,
-    resetActiveCycleId,
     setSecondsPassed,
   ]);
 
